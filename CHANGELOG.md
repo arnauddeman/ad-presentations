@@ -10,3 +10,4 @@ Updated:
 * marp-cli version to [3.0.2](https://github.com/marp-team/marp-cli/releases/tag/v3.0.2) (consider changing this to latest, if you'd like)
 * [actions/checkout](https://github.com/actions/checkout) version to v3
 
+ 
