@@ -27,14 +27,7 @@ jobs:
       - name: Copy images directory (if exists)
         run: if [[ -d img ]]; then cp -R img build/img; fi
 
-      - name: Toc generation
-        run: |
-          curl https://raw.githubusercontent.com/ekalinin/github-markdown-toc/master/gh-md-toc -o gh-md-toc
-          chmod a+x gh-md-toc
-          files=`grep "<\!\-\-ts" -l docs/*`; for f in $files; do ./gh-md-toc --insert --no-backup --hide-footer $f; done
-          rm gh-md-toc
-
-     
+    
       - name: Check if docs folder exists
         id: docs-folder-exists
         run: bash -c "[[ -d docs ]] ; echo \"has_docs=\$?\" >> \"$GITHUB_OUTPUT\""
